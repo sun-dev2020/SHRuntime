@@ -8,28 +8,84 @@
 
 #import "ViewController.h"
 #import "HookObject.h"
+#import <SHFramework/SHFramework.h>
+#import <dlfcn.h>
+
 @interface ViewController ()
 
 @end
 
+static void *libHandle = NULL;
 @implementation ViewController
 
 - (void)btnclicked{
     NSLog(@" btn clicked ");
+    [DymicLog sayHelloToSomeone:@"hello"];
+    DymicLog *obj = [[DymicLog alloc] init];
+    [obj running];
 }
+
+- (void)testForFramework{
+    NSString *documentsPath = [NSString stringWithFormat:@"%@/Documents/SHFramework.framework/SHFramework",NSHomeDirectory()];
+    
+    
+    NSString *documentsPath2 ;
+    documentsPath2 = [[NSBundle mainBundle] pathForResource:@"SHFramework" ofType:@"framework"];
+    
+    [self dlopenLoadDylibWithPath:documentsPath2];
+    [self boundleLoadFrameworkWithPath:documentsPath2];
+    
+}
+
+- (void)dlopenLoadDylibWithPath:(NSString *)path{
+    libHandle = dlopen([path cStringUsingEncoding:NSUTF8StringEncoding], RTLD_NOW);
+    if (libHandle == NULL) {
+        char *error = dlerror();
+        NSLog(@" dlopen error: %s",error);
+    }else{
+        NSLog(@" dlopen load success ");
+        [self testDymicClass];
+    }
+}
+
+- (void)boundleLoadFrameworkWithPath:(NSString *)path{
+    NSError *error = nil;
+    
+    NSBundle *bundle = [NSBundle bundleWithPath:path];
+    if ([bundle loadAndReturnError:&error]) {
+        NSLog(@" load framework success ");
+        [self testDymicClass];
+    }else{
+        NSLog(@" load framework error: %@",error);
+
+    }
+}
+
+- (void)testDymicClass{
+    Class rootClass = NSClassFromString(@"DymicLog");
+    if (rootClass) {
+        id object = [[rootClass alloc] init];
+        [(DymicLog *)object running];
+        
+    }
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    HookObject *hookObj = [[HookObject alloc] init];
     
+    HookObject *hookObj = [[HookObject alloc] init];
+    NSLog(@" HookObj: %@ ",hookObj);
     
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     btn.frame = CGRectMake(100, 100, 100, 100);
     btn.backgroundColor = [UIColor redColor];
     [btn addTarget:self action:@selector(btnclicked) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
+    
+    [self testForFramework];
 }
 
 - (void)didReceiveMemoryWarning {

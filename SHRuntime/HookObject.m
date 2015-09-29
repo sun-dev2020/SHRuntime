@@ -23,7 +23,7 @@
         Ivar var = members[i];
         const char *memberName = ivar_getName(var);
         const char *memberType = ivar_getTypeEncoding(var);
-        NSLog(@" %s ---%d--- %s ",memberName,i, memberType);
+//        NSLog(@" %s ---%d--- %s ",memberName,i, memberType);
     }
     
     Method sendEventMyself = class_getInstanceMethod([self class], @selector(sendEventHooked:));
@@ -43,7 +43,7 @@
     // 这里相当于[super sendEvent] ,因为原生的sendEvent已经指向了别的函数，我们将新增的函数替换原生的sendEvent
     //***** 如果这里将执行函数改成sendEvent 会造成循环
     //***** 在运行时self其实是代表UIWindow，所以使用HookObject的属性会crash
-    self.number = 10;
+//    self.number = 10;
     [self performSelector:@selector(sendEventOriginal:) withObject:event];
 }
 - (void)sendEventOriginal:(UIEvent *)event{

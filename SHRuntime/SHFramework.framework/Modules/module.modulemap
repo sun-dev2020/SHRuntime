@@ -1,0 +1,6 @@
+framework module SHFramework {
+  umbrella header "SHFramework.h"
+
+  export *
+  module * { export * }
+}
