@@ -16,6 +16,8 @@
 		FAABD6451BB8D35800B9D16D /* SHRuntimeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAABD6441BB8D35800B9D16D /* SHRuntimeTests.m */; };
 		FAABD6501BB8D3A500B9D16D /* HookObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FAABD64F1BB8D3A500B9D16D /* HookObject.m */; };
 		FAAE492E1BBA762300F54552 /* SHFramework.framework in Resources */ = {isa = PBXBuildFile; fileRef = FAAE49271BBA6E6200F54552 /* SHFramework.framework */; };
+		FAE302E41BBBB84C0011C48A /* SignalInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE302E31BBBB84C0011C48A /* SignalInstance.m */; };
+		FAE908E81BE7413D0093FD29 /* UIControl+ButtonClick.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE908E71BE7413D0093FD29 /* UIControl+ButtonClick.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,10 @@
 		FAABD64E1BB8D3A500B9D16D /* HookObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HookObject.h; sourceTree = "<group>"; };
 		FAABD64F1BB8D3A500B9D16D /* HookObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HookObject.m; sourceTree = "<group>"; };
 		FAAE49271BBA6E6200F54552 /* SHFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SHFramework.framework; sourceTree = "<group>"; };
+		FAE302E21BBBB84C0011C48A /* SignalInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignalInstance.h; sourceTree = "<group>"; };
+		FAE302E31BBBB84C0011C48A /* SignalInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignalInstance.m; sourceTree = "<group>"; };
+		FAE908E61BE7413D0093FD29 /* UIControl+ButtonClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+ButtonClick.h"; sourceTree = "<group>"; };
+		FAE908E71BE7413D0093FD29 /* UIControl+ButtonClick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+ButtonClick.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +99,10 @@
 				FAABD6301BB8D35800B9D16D /* ViewController.m */,
 				FAABD64E1BB8D3A500B9D16D /* HookObject.h */,
 				FAABD64F1BB8D3A500B9D16D /* HookObject.m */,
+				FAE302E21BBBB84C0011C48A /* SignalInstance.h */,
+				FAE302E31BBBB84C0011C48A /* SignalInstance.m */,
+				FAE908E61BE7413D0093FD29 /* UIControl+ButtonClick.h */,
+				FAE908E71BE7413D0093FD29 /* UIControl+ButtonClick.m */,
 				FAABD6321BB8D35800B9D16D /* Main.storyboard */,
 				FAABD6351BB8D35800B9D16D /* Images.xcassets */,
 				FAABD6371BB8D35800B9D16D /* LaunchScreen.xib */,
@@ -228,8 +238,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAE908E81BE7413D0093FD29 /* UIControl+ButtonClick.m in Sources */,
 				FAABD6311BB8D35800B9D16D /* ViewController.m in Sources */,
 				FAABD62E1BB8D35800B9D16D /* AppDelegate.m in Sources */,
+				FAE302E41BBBB84C0011C48A /* SignalInstance.m in Sources */,
 				FAABD62B1BB8D35800B9D16D /* main.m in Sources */,
 				FAABD6501BB8D3A500B9D16D /* HookObject.m in Sources */,
 			);

@@ -10,6 +10,7 @@
 #import "HookObject.h"
 #import <SHFramework/SHFramework.h>
 #import <dlfcn.h>
+#import "UIControl+ButtonClick.h"
 
 @interface ViewController ()
 
@@ -83,11 +84,19 @@ static void *libHandle = NULL;
     btn.frame = CGRectMake(100, 100, 100, 100);
     btn.backgroundColor = [UIColor redColor];
     [btn addTarget:self action:@selector(btnclicked) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:btn];
     
+    UIButton *btn2 = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn2.frame = CGRectMake(100, 230, 100, 100);
+    btn2.backgroundColor = [UIColor redColor];
+    [btn2 addTarget:self action:@selector(btnclicked2) forControlEvents:UIControlEventTouchUpInside];
+    btn2.acceptEventTime = 3;
+    [self.view addSubview:btn];
+    [self.view addSubview:btn2];
     [self testForFramework];
 }
-
+- (void)btnclicked2{
+    NSLog(@" ttt ");
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

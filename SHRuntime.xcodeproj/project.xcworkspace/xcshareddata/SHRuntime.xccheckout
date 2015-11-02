@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>DB6333CD-59AC-4B57-8141-7E4FF4C76CC4</string>
 	<key>IDESourceControlProjectName</key>
-	<string>SHRuntime</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>3D420AC02E7F3B18F6B3EA170F2DAE61C4B0860C</key>
 		<string>https://github.com/SunMichael/SHRuntime.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>SHRuntime.xcodeproj</string>
+	<string>SHRuntime.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>3D420AC02E7F3B18F6B3EA170F2DAE61C4B0860C</key>
