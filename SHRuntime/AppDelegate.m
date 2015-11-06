@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "HookObject.h"
-
+#import "ViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -19,8 +19,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
-    
+    ViewController *v  = [[ViewController alloc] init];
+    v.addProperty = @"123";
+    NSLog(@" Addproperty: %@ ",v.addProperty);
     return YES;
 }
 

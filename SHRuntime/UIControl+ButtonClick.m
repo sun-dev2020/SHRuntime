@@ -32,6 +32,9 @@ static const char *UIControl_acceptEventTime = "UIControl_acceptEventTime";
 }
 
 /**
+
+*/
+/**
 *  load在类所在的文件被引用时就会执行，init是实例初始化时执行
 */
 + (void)load{

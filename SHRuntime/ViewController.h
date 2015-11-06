@@ -13,3 +13,6 @@
 
 @end
 
+@interface ViewController ()
+@property(nonatomic, copy)NSString *addProperty;
+@end

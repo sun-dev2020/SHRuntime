@@ -12,8 +12,10 @@
 #import <dlfcn.h>
 #import "UIControl+ButtonClick.h"
 
-@interface ViewController ()
 
+@interface ViewController ()
+- (void)addMethod;
+//@property(nonatomic, copy)NSString *addProperty;
 @end
 
 static void *libHandle = NULL;
@@ -25,7 +27,9 @@ static void *libHandle = NULL;
     DymicLog *obj = [[DymicLog alloc] init];
     [obj running];
 }
-
+- (void)addMethod{
+    
+}
 - (void)testForFramework{
     NSString *documentsPath = [NSString stringWithFormat:@"%@/Documents/SHFramework.framework/SHFramework",NSHomeDirectory()];
     
@@ -84,6 +88,7 @@ static void *libHandle = NULL;
     btn.frame = CGRectMake(100, 100, 100, 100);
     btn.backgroundColor = [UIColor redColor];
     [btn addTarget:self action:@selector(btnclicked) forControlEvents:UIControlEventTouchUpInside];
+
     
     UIButton *btn2 = [UIButton buttonWithType:UIButtonTypeCustom];
     btn2.frame = CGRectMake(100, 230, 100, 100);

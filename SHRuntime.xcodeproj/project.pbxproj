@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA7655E31BECA10100FFC548 /* StudentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7655E21BECA10100FFC548 /* StudentModel.m */; };
 		FAABD62B1BB8D35800B9D16D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAABD62A1BB8D35800B9D16D /* main.m */; };
 		FAABD62E1BB8D35800B9D16D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAABD62D1BB8D35800B9D16D /* AppDelegate.m */; };
 		FAABD6311BB8D35800B9D16D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAABD6301BB8D35800B9D16D /* ViewController.m */; };
@@ -31,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA7655E11BECA10100FFC548 /* StudentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentModel.h; sourceTree = "<group>"; };
+		FA7655E21BECA10100FFC548 /* StudentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentModel.m; sourceTree = "<group>"; };
 		FAABD6251BB8D35800B9D16D /* SHRuntime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SHRuntime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAABD6291BB8D35800B9D16D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAABD62A1BB8D35800B9D16D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -103,6 +106,8 @@
 				FAE302E31BBBB84C0011C48A /* SignalInstance.m */,
 				FAE908E61BE7413D0093FD29 /* UIControl+ButtonClick.h */,
 				FAE908E71BE7413D0093FD29 /* UIControl+ButtonClick.m */,
+				FA7655E11BECA10100FFC548 /* StudentModel.h */,
+				FA7655E21BECA10100FFC548 /* StudentModel.m */,
 				FAABD6321BB8D35800B9D16D /* Main.storyboard */,
 				FAABD6351BB8D35800B9D16D /* Images.xcassets */,
 				FAABD6371BB8D35800B9D16D /* LaunchScreen.xib */,
@@ -244,6 +249,7 @@
 				FAE302E41BBBB84C0011C48A /* SignalInstance.m in Sources */,
 				FAABD62B1BB8D35800B9D16D /* main.m in Sources */,
 				FAABD6501BB8D3A500B9D16D /* HookObject.m in Sources */,
+				FA7655E31BECA10100FFC548 /* StudentModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
