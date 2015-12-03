@@ -11,6 +11,18 @@
 
 @implementation StudentModel
 
+
+
+-(instancetype)initWithName:(NSString *)name andAge:(NSString *)age{
+    self = [super init];
+    if (self) {
+        _age = age;
+        _name = name;
+        _location = @"HZ";
+    }
+    return self;
+}
+
 /**
 *  返回所有对象名称
 *
@@ -38,6 +50,9 @@
         SEL getSel = NSSelectorFromString(name);
         [aCoder encodeObject:[self performSelector:getSel] forKey:name];
     }
+//    [aCoder encodeObject:_name forKey:@"name"];
+//    [aCoder encodeObject:_age forKey:@"age"];
+//    [aCoder encodeObject:_location forKey:@"location"];
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder{
@@ -50,6 +65,11 @@
             SEL setSel = NSSelectorFromString(setPropertyName);
             [self performSelector:setSel withObject:[aDecoder decodeObjectForKey:propertyName]];
         }
+        
+//        _name = [aDecoder decodeObjectForKey:@"name"];
+//        _age = [aDecoder decodeObjectForKey:@"age"];
+//        _location = [aDecoder decodeObjectForKey:@"location"];
+        
     }
     return self;
 }

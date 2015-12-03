@@ -11,8 +11,10 @@
 #import <SHFramework/SHFramework.h>
 #import <dlfcn.h>
 #import "UIControl+ButtonClick.h"
-
-
+#import "SubStudentModel.h"
+#import "SecViewController.h"
+#import "SHLibrary.h"
+#import "LCNavigationController.h"
 @interface ViewController ()
 - (void)addMethod;
 //@property(nonatomic, copy)NSString *addProperty;
@@ -80,6 +82,7 @@ static void *libHandle = NULL;
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    self.view.backgroundColor = [UIColor whiteColor];
     
     HookObject *hookObj = [[HookObject alloc] init];
     NSLog(@" HookObj: %@ ",hookObj);
@@ -98,10 +101,62 @@ static void *libHandle = NULL;
     [self.view addSubview:btn];
     [self.view addSubview:btn2];
     [self testForFramework];
+    
+    
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"Student"]) {
+        NSLog(@" exsit ");
+    }
+    StudentModel *model = [[StudentModel alloc] initWithName:@"SS" andAge:@"20"];
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:model];
+    [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"Student"];
+    NSLog(@" %@ ",model);
+    
+    UIImageView *imageV = [[UIImageView alloc] initWithFrame:CGRectMake(100, 200, 100, 100)];
+    UIImage *image = [UIImage imageNamed:@"image001"];
+    imageV.image = [self getGrayImage:image];
+//    [self.view addSubview:imageV];
+    
+
 }
 - (void)btnclicked2{
     NSLog(@" ttt ");
+    SecViewController *sec = [[SecViewController alloc] init];
+    LCNavigationController *nv = (LCNavigationController *)[UIApplication sharedApplication].keyWindow.rootViewController;
+    [nv pushViewController:sec completion:^{
+        
+    }];
 }
+
+
+/**
+*  将彩色图片变黑白
+*
+*  @param sourceImage 彩色图
+*
+*  @return 黑白图
+*/
+- (UIImage*)getGrayImage:(UIImage*)sourceImage
+{
+    int width = sourceImage.size.width;
+    int height = sourceImage.size.height;
+    
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceGray();
+    CGContextRef context = CGBitmapContextCreate (nil,width,height,8,0,colorSpace,kCGBitmapByteOrderDefault);
+    CGColorSpaceRelease(colorSpace);
+    
+    if (context == NULL) {
+        return nil;
+    }
+    
+    CGContextDrawImage(context,CGRectMake(0, 0, width, height), sourceImage.CGImage);
+    CGImageRef grayImageRef = CGBitmapContextCreateImage(context);
+    UIImage *grayImage = [UIImage imageWithCGImage:grayImageRef];
+    CGContextRelease(context);
+    CGImageRelease(grayImageRef);
+    
+    return grayImage;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

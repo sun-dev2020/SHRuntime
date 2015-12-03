@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "HookObject.h"
 #import "ViewController.h"
+#import "LCNavigationController.h"
 @interface AppDelegate ()
 
 @end
@@ -19,9 +20,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    ViewController *v  = [[ViewController alloc] init];
+    ViewController *v  = [[ViewController alloc] initWithNibName:nil bundle:nil];
     v.addProperty = @"123";
     NSLog(@" Addproperty: %@ ",v.addProperty);
+
+    LCNavigationController *nv = [[LCNavigationController alloc] initWithRootViewController:v];
+    self.window.rootViewController = nv;
+    [self.window makeKeyAndVisible];
+    
+    
     return YES;
 }
 

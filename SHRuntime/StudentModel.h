@@ -14,10 +14,13 @@
 
 @interface StudentModel : NSObject<NSCoding>
 
-@property(nonatomic, copy) NSString *name;
-@property(nonatomic, copy) NSString *age;
-@property(nonatomic, copy) NSString *location;
+@property(nonatomic, strong) NSString *name;
+@property(nonatomic, strong) NSString *age;
+@property(nonatomic, strong) NSString *location;
 
+-(Class)class;
+
+-(instancetype)initWithName:(NSString *)name andAge:(NSString *)age;
 +(NSArray *)propertyOfSelf;
 
 @end
