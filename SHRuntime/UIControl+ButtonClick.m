@@ -15,6 +15,8 @@ static const char *UIControl_ignoreEvent = "UIControl_ignoreEvent";
 static const char *UIControl_acceptEventTime = "UIControl_acceptEventTime";
 @implementation UIControl (ButtonClick)
 
+@dynamic acceptEventTime ;
+@dynamic sh_ignoreEvent ;
 
 - (NSTimeInterval)acceptEventTime{
     return [objc_getAssociatedObject(self, UIControl_acceptEventTime) doubleValue];

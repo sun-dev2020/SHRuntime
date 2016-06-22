@@ -102,6 +102,9 @@ static void *libHandle = NULL;
     [self.view addSubview:btn2];
     [self testForFramework];
     
+    NSString *a = [[NSString alloc]initWithFormat:@"aaa"];
+    _tm = a;
+    a = nil;
     
     if ([[NSUserDefaults standardUserDefaults] objectForKey:@"Student"]) {
         NSLog(@" exsit ");
@@ -116,6 +119,8 @@ static void *libHandle = NULL;
     imageV.image = [self getGrayImage:image];
 //    [self.view addSubview:imageV];
     
+    [SubStudentModel read];
+
 
 }
 - (void)btnclicked2{

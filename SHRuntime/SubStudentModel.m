@@ -29,6 +29,8 @@
     return self;
 }
 
-
+-(void)read{
+    NSLog(@"substudenr read");
+}
 
 @end

@@ -14,5 +14,8 @@
 @end
 
 @interface ViewController ()
+
 @property(nonatomic, copy)NSString *addProperty;
+
+@property(nonatomic, retain) NSString *tm;
 @end

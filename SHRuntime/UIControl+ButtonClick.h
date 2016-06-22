@@ -14,4 +14,5 @@
 
 @property(nonatomic, assign) BOOL sh_ignoreEvent;
 
+
 @end

@@ -23,4 +23,6 @@
 -(instancetype)initWithName:(NSString *)name andAge:(NSString *)age;
 +(NSArray *)propertyOfSelf;
 
+
+
 @end

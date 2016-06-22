@@ -10,4 +10,7 @@
 
 @interface SubStudentModel : StudentModel
 
+
++(void)read;
+
 @end

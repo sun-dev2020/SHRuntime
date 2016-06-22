@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA09107A1CF4218800606497 /* DPIrule.txt in Resources */ = {isa = PBXBuildFile; fileRef = FA0910791CF4218800606497 /* DPIrule.txt */; };
+		FA640F711CF6913200B6021B /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = FA640F701CF6913200B6021B /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FA640F731CF692FB00B6021B /* rule.json in Resources */ = {isa = PBXBuildFile; fileRef = FA640F721CF692FB00B6021B /* rule.json */; };
 		FA7655E31BECA10100FFC548 /* StudentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7655E21BECA10100FFC548 /* StudentModel.m */; };
 		FA816BC61BF4B92600C1F632 /* libSHLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA816BC51BF4B92600C1F632 /* libSHLibrary.a */; };
 		FAABD62B1BB8D35800B9D16D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAABD62A1BB8D35800B9D16D /* main.m */; };
@@ -18,6 +21,7 @@
 		FAABD6451BB8D35800B9D16D /* SHRuntimeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAABD6441BB8D35800B9D16D /* SHRuntimeTests.m */; };
 		FAABD6501BB8D3A500B9D16D /* HookObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FAABD64F1BB8D3A500B9D16D /* HookObject.m */; };
 		FAAE492E1BBA762300F54552 /* SHFramework.framework in Resources */ = {isa = PBXBuildFile; fileRef = FAAE49271BBA6E6200F54552 /* SHFramework.framework */; };
+		FAC22B4D1CBB51C90095C682 /* NSObject+Sark.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC22B4C1CBB51C90095C682 /* NSObject+Sark.m */; };
 		FAD318571BF31F2100FCBC4A /* image001.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD318561BF31F2100FCBC4A /* image001.png */; };
 		FADF06A91C0838A0007D91CD /* LCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF06A81C0838A0007D91CD /* LCNavigationController.m */; };
 		FADF06AC1C083A2B007D91CD /* SecViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF06AB1C083A2B007D91CD /* SecViewController.m */; };
@@ -37,6 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA0910791CF4218800606497 /* DPIrule.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DPIrule.txt; sourceTree = "<group>"; };
+		FA640F6F1CF6913200B6021B /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		FA640F701CF6913200B6021B /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		FA640F721CF692FB00B6021B /* rule.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = rule.json; sourceTree = "<group>"; };
 		FA7655E11BECA10100FFC548 /* StudentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentModel.h; sourceTree = "<group>"; };
 		FA7655E21BECA10100FFC548 /* StudentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentModel.m; sourceTree = "<group>"; };
 		FA816BC51BF4B92600C1F632 /* libSHLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSHLibrary.a; sourceTree = "<group>"; };
@@ -57,6 +65,8 @@
 		FAABD64E1BB8D3A500B9D16D /* HookObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HookObject.h; sourceTree = "<group>"; };
 		FAABD64F1BB8D3A500B9D16D /* HookObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HookObject.m; sourceTree = "<group>"; };
 		FAAE49271BBA6E6200F54552 /* SHFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SHFramework.framework; sourceTree = "<group>"; };
+		FAC22B4B1CBB51C90095C682 /* NSObject+Sark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Sark.h"; sourceTree = "<group>"; };
+		FAC22B4C1CBB51C90095C682 /* NSObject+Sark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Sark.m"; sourceTree = "<group>"; };
 		FAD318561BF31F2100FCBC4A /* image001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image001.png; sourceTree = "<group>"; };
 		FADF06A71C0838A0007D91CD /* LCNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCNavigationController.h; sourceTree = "<group>"; };
 		FADF06A81C0838A0007D91CD /* LCNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCNavigationController.m; sourceTree = "<group>"; };
@@ -89,6 +99,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA640F6E1CF6913200B6021B /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				FA640F6F1CF6913200B6021B /* JSONKit.h */,
+				FA640F701CF6913200B6021B /* JSONKit.m */,
+			);
+			path = JSONKit;
+			sourceTree = SOURCE_ROOT;
+		};
 		FAABD61C1BB8D35800B9D16D = {
 			isa = PBXGroup;
 			children = (
@@ -110,8 +129,11 @@
 		FAABD6271BB8D35800B9D16D /* SHRuntime */ = {
 			isa = PBXGroup;
 			children = (
-				FADF06A61C0838A0007D91CD /* LCNavigationController */,
+				FA640F6E1CF6913200B6021B /* JSONKit */,
 				FAD318561BF31F2100FCBC4A /* image001.png */,
+				FA0910791CF4218800606497 /* DPIrule.txt */,
+				FA640F721CF692FB00B6021B /* rule.json */,
+				FADF06A61C0838A0007D91CD /* LCNavigationController */,
 				FA816BC51BF4B92600C1F632 /* libSHLibrary.a */,
 				FA816BC71BF4BA2800C1F632 /* SHLibrary.h */,
 				FAAE49271BBA6E6200F54552 /* SHFramework.framework */,
@@ -131,6 +153,8 @@
 				FA7655E21BECA10100FFC548 /* StudentModel.m */,
 				FAE28CB81BF0512400B96A79 /* SubStudentModel.h */,
 				FAE28CB91BF0512400B96A79 /* SubStudentModel.m */,
+				FAC22B4B1CBB51C90095C682 /* NSObject+Sark.h */,
+				FAC22B4C1CBB51C90095C682 /* NSObject+Sark.m */,
 				FAABD6321BB8D35800B9D16D /* Main.storyboard */,
 				FAABD6351BB8D35800B9D16D /* Images.xcassets */,
 				FAABD6371BB8D35800B9D16D /* LaunchScreen.xib */,
@@ -258,7 +282,9 @@
 				FAABD6341BB8D35800B9D16D /* Main.storyboard in Resources */,
 				FAD318571BF31F2100FCBC4A /* image001.png in Resources */,
 				FAABD6391BB8D35800B9D16D /* LaunchScreen.xib in Resources */,
+				FA640F731CF692FB00B6021B /* rule.json in Resources */,
 				FAABD6361BB8D35800B9D16D /* Images.xcassets in Resources */,
+				FA09107A1CF4218800606497 /* DPIrule.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,11 +304,13 @@
 			files = (
 				FAE908E81BE7413D0093FD29 /* UIControl+ButtonClick.m in Sources */,
 				FAABD6311BB8D35800B9D16D /* ViewController.m in Sources */,
+				FA640F711CF6913200B6021B /* JSONKit.m in Sources */,
 				FAABD62E1BB8D35800B9D16D /* AppDelegate.m in Sources */,
 				FAE302E41BBBB84C0011C48A /* SignalInstance.m in Sources */,
 				FAABD62B1BB8D35800B9D16D /* main.m in Sources */,
 				FAABD6501BB8D3A500B9D16D /* HookObject.m in Sources */,
 				FADF06A91C0838A0007D91CD /* LCNavigationController.m in Sources */,
+				FAC22B4D1CBB51C90095C682 /* NSObject+Sark.m in Sources */,
 				FAE28CBA1BF0512400B96A79 /* SubStudentModel.m in Sources */,
 				FADF06AC1C083A2B007D91CD /* SecViewController.m in Sources */,
 				FA7655E31BECA10100FFC548 /* StudentModel.m in Sources */,
