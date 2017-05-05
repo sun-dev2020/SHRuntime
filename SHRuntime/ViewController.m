@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "HookObject.h"
-#import <SHFramework/SHFramework.h>
+//#import <SHFramework/SHFramework.h>
 #import <dlfcn.h>
 #import "UIControl+ButtonClick.h"
 #import "SubStudentModel.h"
@@ -25,9 +25,9 @@ static void *libHandle = NULL;
 
 - (void)btnclicked{
     NSLog(@" btn clicked ");
-    [DymicLog sayHelloToSomeone:@"hello"];
-    DymicLog *obj = [[DymicLog alloc] init];
-    [obj running];
+//    [DymicLog sayHelloToSomeone:@"hello"];
+//    DymicLog *obj = [[DymicLog alloc] init];
+//    [obj running];
 }
 - (void)addMethod{
     
@@ -72,7 +72,7 @@ static void *libHandle = NULL;
     Class rootClass = NSClassFromString(@"DymicLog");
     if (rootClass) {
         id object = [[rootClass alloc] init];
-        [(DymicLog *)object running];
+//        [(DymicLog *)object running];
         
     }
 }
@@ -100,7 +100,7 @@ static void *libHandle = NULL;
     btn2.acceptEventTime = 3;
     [self.view addSubview:btn];
     [self.view addSubview:btn2];
-    [self testForFramework];
+//    [self testForFramework];
     
     NSString *a = [[NSString alloc]initWithFormat:@"aaa"];
     _tm = a;
